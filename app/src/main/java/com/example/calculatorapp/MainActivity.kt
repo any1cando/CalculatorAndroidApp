@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Log.e("OnCreate", "OnCreate is working")
 
         // Обрабатываем событие для очистки поля ввода
         binding.buttonAC.setOnClickListener {
