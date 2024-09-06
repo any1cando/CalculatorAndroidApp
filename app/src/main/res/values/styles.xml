@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttonNumberOrSecondarySign" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="backgroundTint">@color/grayNumberOrSecondarySign</item>
+    </style>
+
+    <style name="buttonPrimarySign" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="backgroundTint">@color/orangePrimarySign</item>
+    </style>
+
+    <style name="textViewBlackFrame" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+</resources>
