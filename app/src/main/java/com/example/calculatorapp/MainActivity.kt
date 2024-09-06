@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.buttonEqualsSign.setOnClickListener {
-            val finalResult: Double? = when (operation) {
+            val finalResult: Double = when (operation) {
                 "+" -> plusNumbers(savedNumber, inputText.toDoubleOrNull())
                 "-" -> minusNumbers(savedNumber, inputText.toDoubleOrNull())
                 "/" -> divisionNumbers(savedNumber, inputText.toDoubleOrNull())
@@ -198,12 +198,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    // Метод, который очищает ввод
     private fun clearNumbersInput() {
         binding.numbersInput.text = "0.0"
         inputText = ""
     }
 
 
+
+    // Метод, который проверяет запятые и их количество в поле ввода
     private fun checkComma(input: String): String {
         return if (input.isEmpty()) {
             binding.numbersInput.text = "0."
@@ -218,6 +221,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+    // Метод сложения двух чисел
     private fun plusNumbers(firstNumber: Double?, secondNumber: Double?): Double {
         Log.w("Plus Functions Started", "Запустилась функция сложения с числами $firstNumber и $secondNumber")
         return if (firstNumber != null && secondNumber != null) {
@@ -230,15 +235,19 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    // Метод вычитания двух чисел
     private fun minusNumbers(firstNumber: Double?, secondNumber: Double?): Double {
         return if (firstNumber != null && secondNumber != null) { firstNumber - secondNumber } else { 0.0 }
     }
 
 
+    // Метод умножения двух чисел
     private fun multiplyNumbers(firstNumber: Double?, secondNumber: Double?): Double {
         return if (firstNumber != null && secondNumber != null) { firstNumber * secondNumber } else { 0.0 }
     }
 
+
+    // Метод деления двух чисел с исключением
     private fun divisionNumbers(firstNumber: Double?, secondNumber: Double?): Double {
         return if (firstNumber != null && secondNumber != null) {
 
