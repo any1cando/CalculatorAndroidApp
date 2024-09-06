@@ -224,7 +224,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun plusNumbers(firstNumber: Double?, secondNumber: Double?): Double? {
+    private fun plusNumbers(firstNumber: Double?, secondNumber: Double?): Double {
         Log.w("Plus Functions Started", "Запустилась функция сложения с числами $firstNumber и $secondNumber")
         return if (firstNumber != null && secondNumber != null) {
             Log.e("Success", "Вернул ${firstNumber + secondNumber}")
@@ -236,16 +236,16 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun minusNumbers(firstNumber: Double?, secondNumber: Double?): Double? {
+    private fun minusNumbers(firstNumber: Double?, secondNumber: Double?): Double {
         return if (firstNumber != null && secondNumber != null) { firstNumber - secondNumber } else { 0.0 }
     }
 
 
-    private fun multiplyNumbers(firstNumber: Double?, secondNumber: Double?): Double? {
+    private fun multiplyNumbers(firstNumber: Double?, secondNumber: Double?): Double {
         return if (firstNumber != null && secondNumber != null) { firstNumber * secondNumber } else { 0.0 }
     }
 
-    private fun divisionNumbers(firstNumber: Double?, secondNumber: Double?): Double? {
+    private fun divisionNumbers(firstNumber: Double?, secondNumber: Double?): Double {
         return if (firstNumber != null && secondNumber != null) {
 
             try { firstNumber / secondNumber }catch (e: Exception) {
